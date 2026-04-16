@@ -1,0 +1,17 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Ruslan Buzzkill"
+
+
+
+@app.route('/user/<name>')
+def hello_user(name):
+    return f'Hello {name}! Let u know Ruslan is Dushnila)'
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
